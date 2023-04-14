@@ -2,7 +2,11 @@
 module.exports = {
   content: ['./public/**/*.{html,js}'],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        pizarra: "URL('/public/assets/image/background_pizarron.jpg')",
+      },
+    },
   },
   plugins: [],
 };
