@@ -8,43 +8,187 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <nav class="w-full h-auto bg-amber-500">
-      <div>
-        <button>
-          <svg
-            height="32px"
-            id="Layer_1"
-            style="enable-background: new 0 0 32 32"
-            version="1.1"
-            viewBox="0 0 32 32"
-            width="32px"
-            xml:space="preserve"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-          >
-            <path
-              class="fill-current text-white"
-              d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2 s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2 S29.104,22,28,22z"
-            />
-          </svg>
-        </button>
+    <div class="w-full h-auto px-2 fixed bg-green-100 hidden">
+      <button>
+        <svg
+          height="32px"
+          id="Layer_1"
+          style="enable-background: new 0 0 32 32"
+          version="1.1"
+          viewBox="0 0 32 32"
+          width="32px"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <path
+            class="fill-current text-black"
+            d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2 s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2 S29.104,22,28,22z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div class="w-full h-auto fixed hidden">
+      <div
+        class="w-56 h-80 mt-40 float-left z-10 absolute flex flex-col justify-around items-center rounded-r-md bg-pink-300"
+      >
+        <a href="">
+          <button class="w-44 h-14 bg-amber-100 rounded-lg -rotate-3">
+            <span href="#" class="font-bold text-lg">Inicio</span>
+          </button>
+        </a>
+        <a href="">
+          <button class="w-44 h-14 bg-amber-100 rounded-lg -rotate-3">
+            <span href="#" class="font-bold text-lg">Calculadora</span>
+          </button>
+        </a>
+        <a href="">
+          <button class="w-44 h-14 bg-amber-100 rounded-lg -rotate-3">
+            <span href="#" class="font-bold text-lg">Geometría</span>
+          </button>
+        </a>
+        <a href="">
+          <button class="w-44 h-14 bg-amber-100 rounded-lg -rotate-3">
+            <span href="#" class="font-bold text-lg">Estadística</span>
+          </button>
+        </a>
       </div>
-      <di class="flex flex-col">
-        <a href="#">Inicio</a>
-        <a href="#">Calculadora</a>
-        <a href="#">Geometría</a>
-        <a href="#">Estadística</a>
-      </di class="flex flex-col"v>
+    </div>
+    <nav class="w-full gradient_brown hidden">
+      <div class="w-full p-3 flex justify-around">
+        <a href="#">
+          <button class="button">
+            <span class="font-bold text-lg">inicio</span>
+          </button>
+        </a>
+        <a href="#">
+          <button class="button">
+            <span class="font-bold text-lg">Calculadora</span>
+          </button>
+        </a>
+        <a href="#">
+          <button class="button">
+            <span class="font-bold text-lg">Geometría</span>
+          </button>
+        </a>
+        <a href="#">
+          <button class="button">
+            <span class="font-bold text-lg">Estadística</span>
+          </button>
+        </a>
+      </div>
     </nav>
-    <header id="home" class="w-full h-80 bg-pizarra bg-cover bg-center">
-      <h1 class="text-2xl font-bold text-white text-center">
-        Matemáticas Básicas con JavaScript
+    <header
+      id="home"
+      class="w-full h-80 flex justify-center items-center bg-pizarra bg-cover bg-center"
+    >
+      <h1 class="text-2xl font-bold text-white text-center tiza">
+        Matemáticas Básicas<br />
+        con JavaScript
       </h1>
     </header>
-    <main>
-      <section id="calculadora"></section>
+    <main class="w-full h-auto">
+      <section id="calculadora" class="w-full h-auto p-2">
+        <h2 class="font-bold text-2xl">Calculadora</h2>
+        <div class="w-full h-auto p-2 flex justify-center">
+          <div class="w-96 h-auto p-3 rounded-md shadow-lg bg-slate-900">
+            <textarea
+              name=""
+              id=""
+              cols="13"
+              rows="2"
+              class="text-black text-5xl font-bold"
+            ></textarea>
+            <div
+              class="grid grid-cols-4 grid-rows-4 border-2 border-solid bg-slate-500"
+            >
+              <div
+                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+              >
+                <button class="calculator_button">7</button>
+              </div>
+              <div
+                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+              >
+                <button class="calculator_button">8</button>
+              </div>
+              <div
+                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+              >
+                <button class="calculator_button">9</button>
+              </div>
+              <div
+                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+              >
+                <button class="calculator_button">+</button>
+              </div>
+              <div
+                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+              >
+                <button class="calculator_button">4</button>
+              </div>
+              <div
+                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+              >
+                <button class="calculator_button">5</button>
+              </div>
+              <div
+                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+              >
+                <button class="calculator_button">6</button>
+              </div>
+              <div
+                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+              >
+                <button class="calculator_button">-</button>
+              </div>
+              <div
+                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+              >
+                <button class="calculator_button">1</button>
+              </div>
+              <div
+                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+              >
+                <button class="calculator_button">2</button>
+              </div>
+              <div
+                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+              >
+                <button class="calculator_button">3</button>
+              </div>
+              <div
+                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+              >
+                <button class="calculator_button">x</button>
+              </div>
+              <div
+                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+              >
+                <button class="calculator_button">0</button>
+              </div>
+              <div
+                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+              >
+                <button class="calculator_button">C</button>
+              </div>
+              <div
+                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+              >
+                <button class="calculator_button">=</button>
+              </div>
+              <div
+                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+              >
+                <button class="calculator_button">/</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="geometria"></section>
       <section id="estadistica"></section>
     </main>
+    <script src="script/main.js"></script>
   </body>
 </html>
