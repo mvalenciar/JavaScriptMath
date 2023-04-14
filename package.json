@@ -1,0 +1,36 @@
+{
+  "name": "mathjs",
+  "version": "1.0.0",
+  "description": "Matemáticas básicas con JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tw:build": "npx tailwindcss -i ./src/css/input.css -o ./public/css/main.css --watch",
+    "lint": "eslint public/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mvalenciar/JavaScriptMath.git"
+  },
+  "keywords": [
+    "matematicas",
+    "aritmetica",
+    "geometria",
+    "estadistica"
+  ],
+  "author": "Milton Alonso Valencia Rincon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mvalenciar/JavaScriptMath/issues"
+  },
+  "homepage": "https://github.com/mvalenciar/JavaScriptMath#readme",
+  "devDependencies": {
+    "eslint": "^8.38.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.7",
+    "tailwindcss": "^3.3.1"
+  }
+}
