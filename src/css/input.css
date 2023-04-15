@@ -11,6 +11,10 @@
   @apply w-28 h-10 rounded-md rotate-3 border-solid border-2 border-yellow-900 shadow-md bg-amber-100 hover:scale-110 hover:bg-amber-400 hover:transition hover:duration-500;
 }
 
+.calculator_button {
+  @apply w-16 h-16 bg-slate-300 rounded-lg font-bold text-white hover:bg-amber-100 hover:text-black active:bg-amber-300;
+}
+
 @font-face {
   font-family: 'tiza';
   src: url('../font/tiza.ttf');
@@ -18,8 +22,4 @@
 
 .tiza {
   font-family: 'tiza', sans-serif;
-}
-
-.calculator_button {
-  @apply w-16 h-16 bg-slate-300 rounded-lg font-bold text-white hover:bg-amber-100 hover:text-black active:bg-amber-300;
 }

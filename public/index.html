@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
-    <div class="w-full h-auto px-2 fixed bg-green-100 hidden">
-      <button>
+    <div
+      class="w-full h-auto px-2 fixed flex justify-end border-b-2 border-white bg-slate-800 md:hidden"
+    >
+      <button id="btn_movile">
         <svg
           height="32px"
           id="Layer_1"
@@ -22,13 +28,16 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
         >
           <path
-            class="fill-current text-black"
+            class="fill-current text-white"
             d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2 s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2 S29.104,22,28,22z"
           />
         </svg>
       </button>
     </div>
-    <div class="w-full h-auto fixed hidden">
+    <div
+      id="menu_movile"
+      class="w-auto h-auto hidden fixed animate__animated animate__bounceInLeft"
+    >
       <div
         class="w-56 h-80 mt-40 float-left z-10 absolute flex flex-col justify-around items-center rounded-r-md bg-pink-300"
       >
@@ -54,7 +63,7 @@
         </a>
       </div>
     </div>
-    <nav class="w-full gradient_brown hidden">
+    <nav class="w-full h-auto bg-yellow-900 hidden">
       <div class="w-full p-3 flex justify-around">
         <a href="#">
           <button class="button">
