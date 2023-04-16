@@ -560,10 +560,6 @@ video {
   height: auto;
 }
 
-.h-52 {
-  height: 13rem;
-}
-
 .w-44 {
   width: 11rem;
 }
@@ -670,11 +666,6 @@ video {
 .bg-slate-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(15 23 42 / var(--tw-bg-opacity));
-}
-
-.bg-red-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
 }
 
 .bg-yellow-900 {
@@ -816,12 +807,6 @@ video {
 
 .tiza {
   font-family: 'tiza', sans-serif;
-}
-
-@media (min-width: 640px) {
-  .sm\:hidden {
-    display: none;
-  }
 }
 
 @media (min-width: 768px) {

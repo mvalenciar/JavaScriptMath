@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css" />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+    /> -->
   </head>
   <body>
     <div
       class="w-full h-auto px-2 fixed flex justify-end border-b-2 border-white bg-slate-800 md:hidden"
     >
-      <button id="btn_movile">
+      <button id="btn_mobile">
         <svg
           height="32px"
           id="Layer_1"
@@ -35,7 +35,7 @@
       </button>
     </div>
     <div
-      id="menu_movile"
+      id="menu_mobile"
       class="w-auto h-auto hidden fixed animate__animated animate__bounceInLeft"
     >
       <div
@@ -63,7 +63,7 @@
         </a>
       </div>
     </div>
-    <nav class="w-full h-auto bg-yellow-900 hidden">
+    <nav class="w-full h-auto bg-yellow-900 hidden md:block">
       <div class="w-full p-3 flex justify-around">
         <a href="#">
           <button class="button">
@@ -103,7 +103,7 @@
           <div class="w-96 h-auto p-3 rounded-md shadow-lg bg-slate-900">
             <textarea
               name=""
-              id=""
+              id="calculator_screen"
               cols="13"
               rows="2"
               class="text-black text-5xl font-bold"
@@ -114,82 +114,103 @@
               <div
                 class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
               >
-                <button class="calculator_button">7</button>
+                <button id="calculatorBtn7" class="calculator_button">7</button>
               </div>
               <div
                 class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
               >
-                <button class="calculator_button">8</button>
+                <button id="calculatorBtn8" class="calculator_button">8</button>
               </div>
               <div
                 class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
               >
-                <button class="calculator_button">9</button>
+                <button id="calculatorBtn9" class="calculator_button">9</button>
               </div>
               <div
                 class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
               >
-                <button class="calculator_button">+</button>
+                <button id="calculatorBtnSuma" class="calculator_button">
+                  +
+                </button>
               </div>
               <div
                 class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
               >
-                <button class="calculator_button">4</button>
+                <button id="calculatorBtn4" class="calculator_button">4</button>
               </div>
               <div
                 class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
               >
-                <button class="calculator_button">5</button>
+                <button id="calculatorBtn5" class="calculator_button">5</button>
               </div>
               <div
                 class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
               >
-                <button class="calculator_button">6</button>
+                <button id="calculatorBtn6" class="calculator_button">6</button>
               </div>
               <div
                 class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
               >
-                <button class="calculator_button">-</button>
+                <button id="calculatorBtnResta" class="calculator_button">
+                  -
+                </button>
               </div>
               <div
                 class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
               >
-                <button class="calculator_button">1</button>
+                <button id="calculatorBtn1" class="calculator_button">1</button>
               </div>
               <div
                 class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
               >
-                <button class="calculator_button">2</button>
+                <button
+                  id="calculatorBtn2"
+                  id="calculatorBtn2"
+                  class="calculator_button"
+                >
+                  2
+                </button>
               </div>
               <div
                 class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
               >
-                <button class="calculator_button">3</button>
+                <button id="calculatorBtn3" class="calculator_button">3</button>
               </div>
               <div
                 class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
               >
-                <button class="calculator_button">x</button>
+                <button
+                  id="calculatorBtnMultiplicacion"
+                  class="calculator_button"
+                >
+                  x
+                </button>
               </div>
               <div
                 class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
               >
-                <button class="calculator_button">0</button>
+                <button id="calculatorBtn0" class="calculator_button">0</button>
               </div>
               <div
                 class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
               >
-                <button class="calculator_button">C</button>
+                <button id="calculatorBtnReset" class="calculator_button">
+                  C
+                </button>
               </div>
               <div
                 class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
               >
-                <button class="calculator_button">=</button>
+                <button id="calculatorBtnResultado" class="calculator_button">
+                  =
+                </button>
               </div>
               <div
                 class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
               >
-                <button class="calculator_button">/</button>
+                <button id="calculatorBtnDivision" class="calculator_button">
+                  /
+                </button>
               </div>
             </div>
           </div>
