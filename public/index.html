@@ -5,15 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/main.css" />
-    <!-- <link
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    /> -->
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <div
-      class="w-full h-auto px-2 fixed flex justify-end border-b-2 border-white bg-slate-800 md:hidden"
+      class="fixed flex h-auto w-full justify-end border-b-2 border-white bg-slate-800 px-2 md:hidden"
     >
       <button id="btn_mobile">
         <svg
@@ -36,132 +44,131 @@
     </div>
     <div
       id="menu_mobile"
-      class="w-auto h-auto hidden fixed animate__animated animate__bounceInLeft"
+      class="animate__animated animate__bounceInLeft fixed hidden h-auto w-auto"
     >
       <div
-        class="w-56 h-80 mt-40 float-left z-10 absolute flex flex-col justify-around items-center rounded-r-md bg-pink-300"
+        class="absolute z-10 float-left mt-40 flex h-80 w-56 flex-col items-center justify-around rounded-r-md bg-pink-300"
       >
         <a href="">
-          <button class="w-44 h-14 bg-amber-100 rounded-lg -rotate-3">
-            <span href="#" class="font-bold text-lg">Inicio</span>
+          <button class="h-14 w-44 -rotate-3 rounded-lg bg-amber-100">
+            <span href="#" class="text-lg font-bold">Inicio</span>
           </button>
         </a>
         <a href="">
-          <button class="w-44 h-14 bg-amber-100 rounded-lg -rotate-3">
-            <span href="#" class="font-bold text-lg">Calculadora</span>
+          <button class="h-14 w-44 -rotate-3 rounded-lg bg-amber-100">
+            <span href="#" class="text-lg font-bold">Calculadora</span>
           </button>
         </a>
         <a href="">
-          <button class="w-44 h-14 bg-amber-100 rounded-lg -rotate-3">
-            <span href="#" class="font-bold text-lg">Geometría</span>
+          <button class="h-14 w-44 -rotate-3 rounded-lg bg-amber-100">
+            <span href="#" class="text-lg font-bold">Geometría</span>
           </button>
         </a>
         <a href="">
-          <button class="w-44 h-14 bg-amber-100 rounded-lg -rotate-3">
-            <span href="#" class="font-bold text-lg">Estadística</span>
+          <button class="h-14 w-44 -rotate-3 rounded-lg bg-amber-100">
+            <span href="#" class="text-lg font-bold">Estadística</span>
           </button>
         </a>
       </div>
     </div>
-    <nav class="w-full h-auto bg-yellow-900 hidden md:block">
-      <div class="w-full p-3 flex justify-around">
+    <nav class="hidden h-auto w-full bg-yellow-900 md:block">
+      <div class="flex w-full justify-around p-3">
         <a href="#">
           <button class="button">
-            <span class="font-bold text-lg">inicio</span>
+            <span class="text-lg font-bold">inicio</span>
           </button>
         </a>
         <a href="#">
           <button class="button">
-            <span class="font-bold text-lg">Calculadora</span>
+            <span class="text-lg font-bold">Calculadora</span>
           </button>
         </a>
         <a href="#">
           <button class="button">
-            <span class="font-bold text-lg">Geometría</span>
+            <span class="text-lg font-bold">Geometría</span>
           </button>
         </a>
         <a href="#">
           <button class="button">
-            <span class="font-bold text-lg">Estadística</span>
+            <span class="text-lg font-bold">Estadística</span>
           </button>
         </a>
       </div>
     </nav>
     <header
       id="home"
-      class="w-full h-80 flex justify-center items-center bg-pizarra bg-cover bg-center"
+      class="flex h-80 w-full items-center justify-center bg-pizarra bg-cover bg-center"
     >
-      <h1 class="text-2xl font-bold text-white text-center tiza">
+      <h1 class="text-center font-PT_Sans text-xl font-bold text-white">
         Matemáticas Básicas<br />
         con JavaScript
       </h1>
     </header>
-    <main class="w-full h-auto">
-      <section id="calculadora" class="w-full h-auto p-2">
-        <h2 class="font-bold text-2xl">Calculadora</h2>
-        <div class="w-full h-auto p-2 flex justify-center">
-          <div class="w-96 h-auto p-3 rounded-md shadow-lg bg-slate-900">
+    <main class="h-auto w-full">
+      <section id="calculadora" class="h-auto w-full p-2">
+        <h2 class="text-2xl font-bold">Calculadora</h2>
+        <div class="flex h-auto w-full justify-center p-2">
+          <div class="h-auto w-auto rounded-md bg-slate-900 p-3 shadow-lg">
             <textarea
               name=""
               id="calculator_screen"
-              cols="13"
-              rows="2"
-              class="text-black text-5xl font-bold"
+              cols="32"
+              class="text-lg"
             ></textarea>
             <div
               class="grid grid-cols-4 grid-rows-4 border-2 border-solid bg-slate-500"
             >
               <div
-                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+                class="h-auto w-full border-2 border-solid border-white p-2 shadow-lg"
               >
                 <button id="calculatorBtn7" class="calculator_button">7</button>
               </div>
               <div
-                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+                class="h-auto w-full border-2 border-solid border-white p-2 shadow-lg"
               >
                 <button id="calculatorBtn8" class="calculator_button">8</button>
               </div>
               <div
-                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+                class="h-auto w-full border-2 border-solid border-white p-2 shadow-lg"
               >
                 <button id="calculatorBtn9" class="calculator_button">9</button>
               </div>
               <div
-                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+                class="h-auto w-full border-2 border-solid border-white p-2 shadow-lg"
               >
                 <button id="calculatorBtnSuma" class="calculator_button">
                   +
                 </button>
               </div>
               <div
-                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+                class="h-auto w-full border-2 border-solid border-white p-2 shadow-lg"
               >
                 <button id="calculatorBtn4" class="calculator_button">4</button>
               </div>
               <div
-                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+                class="h-auto w-full border-2 border-solid border-white p-2 shadow-lg"
               >
                 <button id="calculatorBtn5" class="calculator_button">5</button>
               </div>
               <div
-                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+                class="h-auto w-full border-2 border-solid border-white p-2 shadow-lg"
               >
                 <button id="calculatorBtn6" class="calculator_button">6</button>
               </div>
               <div
-                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+                class="h-auto w-full border-2 border-solid border-white p-2 shadow-lg"
               >
                 <button id="calculatorBtnResta" class="calculator_button">
                   -
                 </button>
               </div>
               <div
-                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+                class="h-auto w-full border-2 border-solid border-white p-2 shadow-lg"
               >
                 <button id="calculatorBtn1" class="calculator_button">1</button>
               </div>
               <div
-                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+                class="h-auto w-full border-2 border-solid border-white p-2 shadow-lg"
               >
                 <button
                   id="calculatorBtn2"
@@ -172,12 +179,12 @@
                 </button>
               </div>
               <div
-                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+                class="h-auto w-full border-2 border-solid border-white p-2 shadow-lg"
               >
                 <button id="calculatorBtn3" class="calculator_button">3</button>
               </div>
               <div
-                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+                class="h-auto w-full border-2 border-solid border-white p-2 shadow-lg"
               >
                 <button
                   id="calculatorBtnMultiplicacion"
@@ -187,26 +194,26 @@
                 </button>
               </div>
               <div
-                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+                class="h-auto w-full border-2 border-solid border-white p-2 shadow-lg"
               >
                 <button id="calculatorBtn0" class="calculator_button">0</button>
               </div>
               <div
-                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+                class="h-auto w-full border-2 border-solid border-white p-2 shadow-lg"
               >
                 <button id="calculatorBtnReset" class="calculator_button">
                   C
                 </button>
               </div>
               <div
-                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+                class="h-auto w-full border-2 border-solid border-white p-2 shadow-lg"
               >
                 <button id="calculatorBtnResultado" class="calculator_button">
                   =
                 </button>
               </div>
               <div
-                class="w-full h-auto p-2 border-2 border-solid shadow-lg border-white"
+                class="h-auto w-full border-2 border-solid border-white p-2 shadow-lg"
               >
                 <button id="calculatorBtnDivision" class="calculator_button">
                   /
@@ -216,7 +223,73 @@
           </div>
         </div>
       </section>
-      <section id="geometria"></section>
+      <section id="geometria" class="h-auto w-full p-2">
+        <h2 class="text-2xl font-bold">Geometría</h2>
+        <div>
+          <p class="text-base">Elija su fijura geometrica</p>
+          <div class="flex justify-around pt-3">
+            <div
+              class="h-28 w-28 cursor-pointer rounded-full bg-red-400 shadow-md hover:animate-bounce"
+            ></div>
+            <div
+              class="h-28 w-28 cursor-pointer bg-emerald-400 shadow-md hover:animate-bounce"
+            ></div>
+            <div
+              class="h-0 w-0 cursor-pointer border-b-[112px] border-l-[50px] border-r-[50px] border-b-cyan-400 border-l-transparent border-r-transparent hover:animate-bounce"
+            ></div>
+          </div>
+          <div class="h-auto w-full bg-red-400 p-3">
+            <div class="flex h-auto w-full justify-end">
+              <button>
+                <svg
+                  height="30px"
+                  width="30px"
+                  version="1.1"
+                  id="Capa_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 26 26"
+                  xml:space="preserve"
+                >
+                  <g>
+                    <path
+                      style="fill: #030104"
+                      d="M21.125,0H4.875C2.182,0,0,2.182,0,4.875v16.25C0,23.818,2.182,26,4.875,26h16.25
+                 C23.818,26,26,23.818,26,21.125V4.875C26,2.182,23.818,0,21.125,0z M18.78,17.394l-1.388,1.387c-0.254,0.255-0.67,0.255-0.924,0
+                 L13,15.313L9.533,18.78c-0.255,0.255-0.67,0.255-0.925-0.002L7.22,17.394c-0.253-0.256-0.253-0.669,0-0.926l3.468-3.467
+                 L7.221,9.534c-0.254-0.256-0.254-0.672,0-0.925l1.388-1.388c0.255-0.257,0.671-0.257,0.925,0L13,10.689l3.468-3.468
+                 c0.255-0.257,0.671-0.257,0.924,0l1.388,1.386c0.254,0.255,0.254,0.671,0.001,0.927l-3.468,3.467l3.468,3.467
+                 C19.033,16.725,19.033,17.138,18.78,17.394z"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+            <h2 class="text-center text-xl font-bold">
+              Área y Perímetro de Circuferencia
+            </h2>
+
+            <form action="" class="flex flex-col pt-3">
+              <label class="font-bold" for="radio">Radio: </label>
+              <input
+                type="text"
+                class="h-9 w-52 rounded-md text-xl shadow-md"
+              />
+              <label class="font-bold" for="area">Área: </label>
+              <input
+                type="text"
+                class="h-9 w-52 rounded-md text-xl shadow-md"
+              />
+              <label class="font-bold" for="area">Perímetro: </label>
+              <input
+                type="text"
+                class="h-9 w-52 rounded-md text-xl shadow-md"
+              />
+              <button class="button" type="button">Calcular</button>
+            </form>
+          </div>
+        </div>
+      </section>
       <section id="estadistica"></section>
     </main>
     <script src="script/main.js"></script>

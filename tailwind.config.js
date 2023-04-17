@@ -11,7 +11,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      tiza: ['tiza', 'ui-sans-serif'],
+      PT_Sans: ['PT Sans', 'ui-sans-serif'],
     },
   },
   plugins: [],

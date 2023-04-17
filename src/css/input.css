@@ -8,11 +8,11 @@
 }
 
 .button {
-  @apply w-28 h-10 rounded-md rotate-3 border-solid border-2 border-yellow-900 shadow-md bg-amber-100 hover:scale-110 hover:bg-amber-400 hover:transition hover:duration-500;
+  @apply h-10 w-28 rotate-3 rounded-md border-2 border-solid border-yellow-900 bg-amber-100 shadow-md hover:scale-110 hover:bg-amber-400 hover:transition hover:duration-500;
 }
 
 .calculator_button {
-  @apply w-16 h-16 bg-slate-300 rounded-lg font-bold text-white hover:bg-amber-100 hover:text-black active:bg-amber-300;
+  @apply h-10 w-10 rounded-lg bg-slate-300 font-bold text-white hover:bg-amber-100 hover:text-black active:bg-amber-300;
 }
 
 @font-face {
