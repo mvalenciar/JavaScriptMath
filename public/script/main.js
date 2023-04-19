@@ -1,27 +1,11 @@
 const btnMobile = document.querySelector('#btn_mobile');
 const menuMobile = document.querySelector('#menu_mobile');
-const calculatorScreen = document.querySelector('#calculator_screen');
-const calculatorBtn7 = document.querySelector('#calculatorBtn7');
-const calculatorBtn8 = document.querySelector('#calculatorBtn8');
-const calculatorBtn9 = document.querySelector('#calculatorBtn9');
-const calculatorBtnSuma = document.querySelector('#calculatorBtnSuma');
-const calculatorBtn4 = document.querySelector('#calculatorBtn4');
-const calculatorBtn5 = document.querySelector('#calculatorBtn5');
-const calculatorBtn6 = document.querySelector('#calculatorBtn6');
-const calculatorBtnResta = document.querySelector('#calculatorBtnResta');
-const calculatorBtn1 = document.querySelector('#calculatorBtn1');
-const calculatorBtn2 = document.querySelector('#calculatorBtn2');
-const calculatorBtn3 = document.querySelector('#calculatorBtn3');
-const calculatorBtnMultiplicacion = document.querySelector(
-  '#calculatorBtnMultiplicacion',
-);
-const calculatorBtn0 = document.querySelector('#calculatorBtn0');
-const calculatorBtnReset = document.querySelector('#calculatorBtnReset');
-const calculatorBtnDivision = document.querySelector('#calculatorBtnDivision');
-const calculatorBtnResultado = document.querySelector(
-  '#calculatorBtnResultado',
-);
-let resultado;
+const modalCircle = document.querySelector('#modal_circle');
+const modalSquare = document.querySelector('#modal_square');
+const circleFigure = document.querySelector('#circle_figure');
+const squareFigure = document.querySelector('#square_figure');
+const btncloseModalCircle = document.querySelector('#BtnCloseModalCircle');
+const btncloseModalSquare = document.querySelector('#BtnCloseModalSquare');
 
 btnMobile.addEventListener('click', () => {
   const isMenuMobileHidden = menuMobile.classList.contains('hidden');
@@ -34,68 +18,37 @@ btnMobile.addEventListener('click', () => {
   }
 });
 
-// calculator config
-calculatorBtn7.addEventListener('click', () => {
-  calculatorScreen.textContent += '7';
-});
+// circle modal config
 
-calculatorBtn8.addEventListener('click', () => {
-  calculatorScreen.textContent += '8';
-});
+function closeModalCircle() {
+  const isModalCircleHidden = modalCircle.classList.contains('hidden');
+  if (!isModalCircleHidden) {
+    modalCircle.classList.add('hidden');
+  }
+}
 
-calculatorBtn9.addEventListener('click', () => {
-  calculatorScreen.textContent += '9';
-});
+function showModalCircle() {
+  modalCircle.classList.add('animate__fadeIn');
+  modalCircle.classList.remove('hidden');
+}
 
-calculatorBtnSuma.addEventListener('click', () => {
-  calculatorScreen.textContent += '+';
-});
+btncloseModalCircle.addEventListener('click', closeModalCircle);
+circleFigure.addEventListener('click', showModalCircle);
 
-calculatorBtn4.addEventListener('click', () => {
-  calculatorScreen.textContent += '4';
-});
+// Square Modal Config
+function closeModalSquare() {
+  const isModalSquareHidden = modalSquare.classList.contains('hidden');
+  if (!isModalSquareHidden) {
+    modalSquare.classList.add('hidden');
+  }
+}
 
-calculatorBtn5.addEventListener('click', () => {
-  calculatorScreen.textContent += '5';
-});
+function showModalSquare() {
+  modalSquare.classList.add('animate__fadeIn');
+  modalSquare.classList.remove('hidden');
+}
 
-calculatorBtn6.addEventListener('click', () => {
-  calculatorScreen.textContent += '6';
-});
-
-calculatorBtnResta.addEventListener('click', () => {
-  calculatorScreen.textContent += '-';
-});
-
-calculatorBtn1.addEventListener('click', () => {
-  calculatorScreen.textContent += '1';
-});
-
-calculatorBtn2.addEventListener('click', () => {
-  calculatorScreen.textContent += '2';
-});
-
-calculatorBtn3.addEventListener('click', () => {
-  calculatorScreen.textContent += '3';
-});
-
-calculatorBtnMultiplicacion.addEventListener('click', () => {
-  calculatorScreen.textContent += '*';
-});
-
-calculatorBtn0.addEventListener('click', () => {
-  calculatorScreen.textContent += '0';
-});
-
-calculatorBtnDivision.addEventListener('click', () => {
-  calculatorScreen.textContent += '/';
-});
-
-calculatorBtnReset.addEventListener('click', () => {
-  calculatorScreen.textContent = '';
-});
-
-calculatorBtnResultado.addEventListener('click', () => {
-  resultado = eval(calculatorScreen.textContent);
-  calculatorScreen.textContent = resultado;
-});
+btncloseModalCircle.addEventListener('click', closeModalCircle);
+circleFigure.addEventListener('click', showModalCircle);
+btncloseModalSquare.addEventListener('click', closeModalSquare);
+squareFigure.addEventListener('click', showModalSquare);

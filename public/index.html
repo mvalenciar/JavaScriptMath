@@ -20,8 +20,9 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
+    <!-- Boton Menu Mobile -->
     <div
-      class="fixed flex h-auto w-full justify-end border-b-2 border-white bg-slate-800 px-2 md:hidden"
+      class="fixed flex h-auto w-full justify-end border-b-2 border-white bg-blue-950 px-2 shadow-md md:hidden"
     >
       <button id="btn_mobile">
         <svg
@@ -42,6 +43,7 @@
         </svg>
       </button>
     </div>
+    <!-- Menu Mobile -->
     <div
       id="menu_mobile"
       class="animate__animated animate__bounceInLeft fixed hidden h-auto w-auto"
@@ -71,26 +73,29 @@
         </a>
       </div>
     </div>
-    <nav class="hidden h-auto w-full bg-yellow-900 md:block">
+    <!-- Menu DeskTop -->
+    <nav
+      class="hidden h-auto w-full border-b-4 border-white bg-blue-950 md:block"
+    >
       <div class="flex w-full justify-around p-3">
         <a href="#">
           <button class="button">
-            <span class="text-lg font-bold">inicio</span>
+            <span class="font-PT_Sans text-lg font-bold">inicio</span>
           </button>
         </a>
         <a href="#">
           <button class="button">
-            <span class="text-lg font-bold">Calculadora</span>
+            <span class="font-PT_Sans text-lg font-bold">Calculadora</span>
           </button>
         </a>
         <a href="#">
           <button class="button">
-            <span class="text-lg font-bold">Geometría</span>
+            <span class="font-PT_Sans text-lg font-bold">Geometría</span>
           </button>
         </a>
         <a href="#">
           <button class="button">
-            <span class="text-lg font-bold">Estadística</span>
+            <span class="font-PT_Sans text-lg font-bold">Estadística</span>
           </button>
         </a>
       </div>
@@ -99,7 +104,9 @@
       id="home"
       class="flex h-80 w-full items-center justify-center bg-pizarra bg-cover bg-center"
     >
-      <h1 class="text-center font-PT_Sans text-xl font-bold text-white">
+      <h1
+        class="text-center font-PT_Sans text-3xl font-bold text-white md:text-6xl"
+      >
         Matemáticas Básicas<br />
         con JavaScript
       </h1>
@@ -108,6 +115,7 @@
       <section id="calculadora" class="h-auto w-full p-2">
         <h2 class="text-2xl font-bold">Calculadora</h2>
         <div class="flex h-auto w-full justify-center p-2">
+          <!-- calculadora -->
           <div class="h-auto w-auto rounded-md bg-slate-900 p-3 shadow-lg">
             <textarea
               name=""
@@ -229,18 +237,24 @@
           <p class="text-base">Elija su fijura geometrica</p>
           <div class="flex justify-around pt-3">
             <div
+              id="circle_figure"
               class="h-28 w-28 cursor-pointer rounded-full bg-red-400 shadow-md hover:animate-bounce"
             ></div>
             <div
+              id="square_figure"
               class="h-28 w-28 cursor-pointer bg-emerald-400 shadow-md hover:animate-bounce"
             ></div>
             <div
               class="h-0 w-0 cursor-pointer border-b-[112px] border-l-[50px] border-r-[50px] border-b-cyan-400 border-l-transparent border-r-transparent hover:animate-bounce"
             ></div>
           </div>
-          <div class="h-auto w-full bg-red-400 p-3">
+          <!-- Modal Circuferencia -->
+          <div
+            id="modal_circle"
+            class="animate__animated fixed left-1/2 top-1/2 m-auto hidden h-auto w-auto -translate-x-1/2 -translate-y-1/2 rounded-lg bg-blue-950 p-3 shadow-lg"
+          >
             <div class="flex h-auto w-full justify-end">
-              <button>
+              <button id="BtnCloseModalCircle" class="active:-scale-95">
                 <svg
                   height="30px"
                   width="30px"
@@ -253,7 +267,7 @@
                 >
                   <g>
                     <path
-                      style="fill: #030104"
+                      class="fill-current text-white"
                       d="M21.125,0H4.875C2.182,0,0,2.182,0,4.875v16.25C0,23.818,2.182,26,4.875,26h16.25
                  C23.818,26,26,23.818,26,21.125V4.875C26,2.182,23.818,0,21.125,0z M18.78,17.394l-1.388,1.387c-0.254,0.255-0.67,0.255-0.924,0
                  L13,15.313L9.533,18.78c-0.255,0.255-0.67,0.255-0.925-0.002L7.22,17.394c-0.253-0.256-0.253-0.669,0-0.926l3.468-3.467
@@ -265,27 +279,127 @@
                 </svg>
               </button>
             </div>
-            <h2 class="text-center text-xl font-bold">
+            <h2 class="text-center font-PT_Sans text-xl font-bold text-white">
               Área y Perímetro de Circuferencia
             </h2>
 
-            <form action="" class="flex flex-col pt-3">
-              <label class="font-bold" for="radio">Radio: </label>
+            <form
+              action=""
+              class="flex flex-col items-center justify-center pt-3"
+            >
+              <label class="mt-3 font-PT_Sans font-bold text-white" for="radio"
+                >Radio:
+              </label>
               <input
+                id="ratio_circle"
                 type="text"
                 class="h-9 w-52 rounded-md text-xl shadow-md"
               />
-              <label class="font-bold" for="area">Área: </label>
+              <label class="mt-3 font-PT_Sans font-bold text-white" for="area"
+                >Área:
+              </label>
               <input
+                id="area_circle"
+                type="text"
+                readonly
+                class="h-9 w-52 rounded-md text-xl shadow-md"
+              />
+              <label class="mt-3 font-PT_Sans font-bold text-white" for="area"
+                >Perímetro:
+              </label>
+              <input
+                id="perimeter_circle"
+                type="text"
+                readonly
+                class="h-9 w-52 rounded-md text-xl shadow-md"
+              />
+              <button
+                id="btnCalcModalCircle"
+                class="button mt-5 font-PT_Sans font-bold"
+                type="button"
+              >
+                Calcular
+              </button>
+            </form>
+          </div>
+          <!-- Modal Cuadrado -->
+          <div
+            id="modal_square"
+            class="animate__animated fixed left-1/2 top-1/2 m-auto hidden h-auto w-auto -translate-x-1/2 -translate-y-1/2 rounded-lg bg-blue-950 p-3 shadow-lg"
+          >
+            <div class="flex h-auto w-full justify-end">
+              <button id="BtnCloseModalSquare" class="active:-scale-95">
+                <svg
+                  height="30px"
+                  width="30px"
+                  version="1.1"
+                  id="Capa_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 26 26"
+                  xml:space="preserve"
+                >
+                  <g>
+                    <path
+                      class="fill-current text-white"
+                      d="M21.125,0H4.875C2.182,0,0,2.182,0,4.875v16.25C0,23.818,2.182,26,4.875,26h16.25
+                 C23.818,26,26,23.818,26,21.125V4.875C26,2.182,23.818,0,21.125,0z M18.78,17.394l-1.388,1.387c-0.254,0.255-0.67,0.255-0.924,0
+                 L13,15.313L9.533,18.78c-0.255,0.255-0.67,0.255-0.925-0.002L7.22,17.394c-0.253-0.256-0.253-0.669,0-0.926l3.468-3.467
+                 L7.221,9.534c-0.254-0.256-0.254-0.672,0-0.925l1.388-1.388c0.255-0.257,0.671-0.257,0.925,0L13,10.689l3.468-3.468
+                 c0.255-0.257,0.671-0.257,0.924,0l1.388,1.386c0.254,0.255,0.254,0.671,0.001,0.927l-3.468,3.467l3.468,3.467
+                 C19.033,16.725,19.033,17.138,18.78,17.394z"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+            <h2 class="text-center font-PT_Sans text-xl font-bold text-white">
+              Área y Perímetro de Cuadrado
+            </h2>
+
+            <form
+              action=""
+              class="flex flex-col items-center justify-center pt-3"
+            >
+              <label
+                class="mt-3 font-PT_Sans font-bold text-white"
+                for="side_square"
+                >Lado:
+              </label>
+              <input
+                id="side_square"
                 type="text"
                 class="h-9 w-52 rounded-md text-xl shadow-md"
               />
-              <label class="font-bold" for="area">Perímetro: </label>
+              <label
+                class="mt-3 font-PT_Sans font-bold text-white"
+                for="area_square"
+                >Área:
+              </label>
               <input
+                id="area_square"
                 type="text"
+                readonly
                 class="h-9 w-52 rounded-md text-xl shadow-md"
               />
-              <button class="button" type="button">Calcular</button>
+              <label
+                class="mt-3 font-PT_Sans font-bold text-white"
+                for="perimeter_square"
+                >Perímetro:
+              </label>
+              <input
+                id="perimeter_square"
+                type="text"
+                readonly
+                class="h-9 w-52 rounded-md text-xl shadow-md"
+              />
+              <button
+                id="btnCalcModalSquare"
+                class="button mt-5 font-PT_Sans font-bold"
+                type="button"
+              >
+                Calcular
+              </button>
             </form>
           </div>
         </div>
@@ -293,5 +407,7 @@
       <section id="estadistica"></section>
     </main>
     <script src="script/main.js"></script>
+    <script src="script/calculator.js"></script>
+    <script src="script/geometry.js"></script>
   </body>
 </html>
