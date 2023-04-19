@@ -3,6 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
+header {
+  background-image: url('../assets/image/background_pizarron.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
 .button {
   @apply h-10 w-28 rotate-3 rounded-md border-2 border-solid border-white bg-sky-300 shadow-md hover:scale-110 hover:bg-violet-400 hover:transition hover:duration-500;
 }
