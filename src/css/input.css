@@ -9,6 +9,12 @@ header {
   background-size: cover;
 }
 
+#calculator_container {
+  background-image: url('../assets/image/pincel.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
 .button {
   @apply h-10 w-28 rotate-3 rounded-md border-2 border-solid border-white bg-sky-300 shadow-md hover:scale-110 hover:bg-violet-400 hover:transition hover:duration-500;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <!-- Boton Menu Mobile -->
+    <!-- Botón Menu Mobile -->
     <div
       class="fixed flex h-auto w-full justify-end border-b-2 border-white bg-blue-950 px-2 shadow-md md:hidden"
     >
@@ -46,7 +46,7 @@
     <!-- Menu Mobile -->
     <div
       id="menu_mobile"
-      class="animate__animated animate__bounceInLeft fixed h-auto w-auto"
+      class="animate__animated animate__bounceInLeft fixed hidden h-auto w-auto"
     >
       <div
         class="absolute z-10 float-left mt-40 flex h-80 w-56 flex-col justify-around overflow-x-hidden rounded-r-full border-2 border-solid border-white bg-blue-950 pl-3"
@@ -111,7 +111,10 @@
     <main class="h-auto w-full">
       <section id="calculadora" class="h-auto w-full p-2">
         <h2 class="text-2xl font-bold">Calculadora</h2>
-        <div class="flex h-auto w-full justify-center p-2">
+        <div
+          class="flex h-auto w-full justify-center p-2"
+          id="calculator_container"
+        >
           <!-- calculadora -->
           <div class="h-auto w-auto rounded-md bg-slate-900 p-3 shadow-lg">
             <textarea
@@ -231,7 +234,7 @@
       <section id="geometria" class="h-auto w-full bg-blue-950 p-2">
         <h2 class="text-2xl font-bold text-white">Geometría</h2>
         <div>
-          <p class="text-base text-white">Elija su fijura geometrica</p>
+          <p class="text-base text-white">Elija su figura geométrica</p>
           <div class="flex justify-around pt-3">
             <div
               id="circle_figure"
@@ -246,7 +249,7 @@
               class="h-0 w-0 cursor-pointer border-b-[112px] border-l-[50px] border-r-[50px] border-b-cyan-400 border-l-transparent border-r-transparent hover:animate-bounce"
             ></div>
           </div>
-          <!-- Modal Circuferencia -->
+          <!-- Modal Circulo -->
           <div
             id="modal_circle"
             class="animate__animated fixed left-1/2 top-1/2 m-auto hidden h-auto w-auto -translate-x-1/2 -translate-y-1/2 rounded-lg bg-blue-950 p-3 shadow-lg"
@@ -290,7 +293,7 @@
               </label>
               <input
                 id="ratio_circle"
-                type="text"
+                type="number"
                 class="h-9 w-52 rounded-md text-xl shadow-md"
               />
               <label class="mt-3 font-PT_Sans font-bold text-white" for="area"
@@ -298,7 +301,7 @@
               </label>
               <input
                 id="area_circle"
-                type="text"
+                type="number"
                 readonly
                 class="h-9 w-52 rounded-md text-xl shadow-md"
               />
@@ -307,7 +310,7 @@
               </label>
               <input
                 id="perimeter_circle"
-                type="text"
+                type="number"
                 readonly
                 class="h-9 w-52 rounded-md text-xl shadow-md"
               />
@@ -366,7 +369,7 @@
               </label>
               <input
                 id="side_square"
-                type="text"
+                type="number"
                 class="h-9 w-52 rounded-md text-xl shadow-md"
               />
               <label
@@ -376,7 +379,7 @@
               </label>
               <input
                 id="area_square"
-                type="text"
+                type="number"
                 readonly
                 class="h-9 w-52 rounded-md text-xl shadow-md"
               />
@@ -387,7 +390,7 @@
               </label>
               <input
                 id="perimeter_square"
-                type="text"
+                type="number"
                 readonly
                 class="h-9 w-52 rounded-md text-xl shadow-md"
               />
@@ -406,7 +409,7 @@
             class="animate__animated fixed left-1/2 top-1/2 m-auto hidden h-96 w-auto -translate-x-1/2 -translate-y-1/2 overflow-scroll overflow-y-auto overflow-x-hidden rounded-lg bg-blue-950 p-3 shadow-lg"
           >
             <div class="flex h-auto w-full justify-end">
-              <button id="btncloseModalTriangle" class="active:-scale-95">
+              <button id="btnCloseModalTriangle" class="active:-scale-95">
                 <svg
                   height="30px"
                   width="30px"
@@ -446,7 +449,7 @@
               </label>
               <input
                 id="base_triangle"
-                type="text"
+                type="number"
                 class="h-9 w-52 rounded-md text-xl shadow-md"
               />
               <label
@@ -456,48 +459,49 @@
               </label>
               <input
                 id="height_triangle"
-                type="text"
+                type="number"
                 class="h-9 w-52 rounded-md text-xl shadow-md"
               />
               <label
                 class="mt-3 font-PT_Sans font-bold text-white"
-                for="side_a_triangle"
-                >Lado a:
-              </label>
+                for="sideATriangle"
+                >Lado A:</label
+              >
               <input
-                id="side_a_triangle"
-                type="text"
-                readonly
                 class="h-9 w-52 rounded-md text-xl shadow-md"
+                type="number"
+                id="sideATriangle"
               />
               <label
                 class="mt-3 font-PT_Sans font-bold text-white"
-                for="side_b_triangle"
-                >Lado b:
-              </label>
+                for="sideBTriangle"
+                >Lado B:</label
+              >
               <input
-                id="side_b_triangle"
-                type="text"
                 class="h-9 w-52 rounded-md text-xl shadow-md"
+                type="number"
+                id="sideBTriangle"
               />
               <label
                 class="mt-3 font-PT_Sans font-bold text-white"
-                for="side_c_triangle"
-                >Lado c:
-              </label>
+                for="sideCTriangle"
+                >Lado C:</label
+              >
               <input
-                id="side_c_triangle"
-                type="text"
                 class="h-9 w-52 rounded-md text-xl shadow-md"
+                type="number"
+                id="sideCTriangle"
               />
+
               <label
                 class="mt-3 font-PT_Sans font-bold text-white"
                 for="area_triangle"
-                >area:
+                >Área:
               </label>
               <input
                 id="area_triangle"
-                type="text"
+                type="number"
+                readonly
                 class="h-9 w-52 rounded-md text-xl shadow-md"
               />
               <label
@@ -507,7 +511,8 @@
               </label>
               <input
                 id="perimeter_triangle"
-                type="text"
+                type="number"
+                readonly
                 class="h-9 w-52 rounded-md text-xl shadow-md"
               />
               <button
@@ -521,10 +526,77 @@
           </div>
         </div>
       </section>
-      <section id="estadistica"></section>
+      <section id="estadistica" class="h-auto w-full p-2">
+        <h2 class="text-2xl font-bold">Estadística Básica</h2>
+        <div class="h-auto w-full">
+          <p>
+            Para ingresar los datos ingrese el valor en el campo y haga click en
+            el botón ingresar. Repita el proceso hasta completar todos los datos
+            <span class="font-bold">Nota: </span>Solo se aceptan datos numéricos
+          </p>
+          <div class="flex h-auto w-full flex-col items-center">
+            <form action="" class="sm: flex flex-col items-center">
+              <label class="font-PT_Sans font-bold" for="data">Datos: </label>
+              <input
+                type="number"
+                name="data"
+                id="data"
+                class="h-9 w-52 rounded-md text-xl shadow-md"
+              />
+              <button
+                type="button"
+                class="button mt-5 font-PT_Sans font-bold"
+                id="enter_button"
+              >
+                Ingresar
+              </button>
+            </form>
+            <h3 class="font-PT_Sans font-bold">Datos Ingresados:</h3>
+            <p id="entered_data"></p>
+          </div>
+          <h2 class="text-2xl font-bold">Promedio, Moda y Mediana</h2>
+          <p>
+            Para obtener el promedio, la moda y la mediana has click en el botón
+            calcular
+          </p>
+          <div class="flex h-auto w-full justify-center">
+            <form action="" class="flex flex-col items-center pt-3">
+              <label class="mt-3 font-PT_Sans font-bold" for="average"
+                >Promedio:
+              </label>
+              <input
+                id="average"
+                class="h-9 w-52 rounded-md text-xl shadow-md"
+                type="text"
+                readonly
+              />
+              <label class="mt-3 font-PT_Sans font-bold" for="fashion"
+                >Moda:</label
+              >
+              <input
+                id="fashion"
+                class="h-9 w-52 rounded-md text-xl shadow-md"
+                type="text"
+              />
+              <label class="mt-3 font-PT_Sans font-bold" for="median"
+                >Mediana:
+              </label>
+              <input
+                id="median"
+                class="h-9 w-52 rounded-md text-xl shadow-md"
+                type="text"
+              />
+              <button class="button mt-5 font-PT_Sans font-bold">
+                Calcular
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="script/main.js"></script>
     <script src="script/calculator.js"></script>
     <script src="script/geometry.js"></script>
+    <script src="script/statistics.js"></script>
   </body>
 </html>

@@ -6,9 +6,9 @@ const modalTriangle = document.querySelector('#modal_triangle');
 const circleFigure = document.querySelector('#circle_figure');
 const squareFigure = document.querySelector('#square_figure');
 const triangleFigure = document.querySelector('#triangle_figure');
-const btncloseModalCircle = document.querySelector('#BtnCloseModalCircle');
-const btncloseModalSquare = document.querySelector('#BtnCloseModalSquare');
-const btncloseModalTriangle = document.querySelector('#btncloseModalTriangle');
+const btnCloseModalCircle = document.querySelector('#BtnCloseModalCircle');
+const btnCloseModalSquare = document.querySelector('#BtnCloseModalSquare');
+const btnCloseModalTriangle = document.querySelector('#btnCloseModalTriangle');
 
 btnMobile.addEventListener('click', () => {
   const isMenuMobileHidden = menuMobile.classList.contains('hidden');
@@ -35,7 +35,7 @@ function showModalCircle() {
   modalCircle.classList.remove('hidden');
 }
 
-btncloseModalCircle.addEventListener('click', closeModalCircle);
+btnCloseModalCircle.addEventListener('click', closeModalCircle);
 circleFigure.addEventListener('click', showModalCircle);
 
 // Square Modal Config
@@ -65,9 +65,9 @@ function showModalTriangle() {
   modalTriangle.classList.remove('hidden');
 }
 
-btncloseModalCircle.addEventListener('click', closeModalCircle);
+btnCloseModalCircle.addEventListener('click', closeModalCircle);
 circleFigure.addEventListener('click', showModalCircle);
-btncloseModalSquare.addEventListener('click', closeModalSquare);
+btnCloseModalSquare.addEventListener('click', closeModalSquare);
 squareFigure.addEventListener('click', showModalSquare);
-btncloseModalTriangle.addEventListener('click', closeModalTriangle);
+btnCloseModalTriangle.addEventListener('click', closeModalTriangle);
 triangleFigure.addEventListener('click', showModalTriangle);
