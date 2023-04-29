@@ -577,6 +577,7 @@
                 id="fashion"
                 class="h-9 w-52 rounded-md text-xl shadow-md"
                 type="text"
+                readonly
               />
               <label class="mt-3 font-PT_Sans font-bold" for="median"
                 >Mediana:
@@ -585,8 +586,13 @@
                 id="median"
                 class="h-9 w-52 rounded-md text-xl shadow-md"
                 type="text"
+                readonly
               />
-              <button class="button mt-5 font-PT_Sans font-bold">
+              <button
+                id="statistical_calculations_button"
+                class="button mt-5 font-PT_Sans font-bold"
+                type="button"
+              >
                 Calcular
               </button>
             </form>
@@ -598,5 +604,6 @@
     <script src="script/calculator.js"></script>
     <script src="script/geometry.js"></script>
     <script src="script/statistics.js"></script>
+    <!-- <script src="script/prueba.js"></script> -->
   </body>
 </html>
